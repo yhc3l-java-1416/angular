@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="form">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Form demo</title>
+		<link rel="stylesheet" href="../../../lib/bootstrap-3.2.0-dist/css/bootstrap.min.css"></link>
+		<link rel="stylesheet" href="../../../lib/bootstrap-3.2.0-dist/css/bootstrap-theme.min.css"></link>
+		<script src="../../../lib/angular1.3.x/js/angular.min.js"></script>
+		<script src="./js/exercise1Completed.js"></script>
+		<style>
+		  input.ng-invalid.ng-dirty{
+		    background-color: #FA787E;
+		  }
+
+		  input.ng-valid.ng-dirty {
+		    background-color: #78FA89;
+		  }
+		</style>
+	</head>
+	<body ng-controller="formCtrl">
+		<div class="container">
+			<h1>Form demo</h1>
+			<form name="testForm" ng-submit="sendForm()">
+			 	<div class="form-group">
+	   				<label for="firstname">Firstname</label>
+					<input name="firstname" type="text" ng-model="formData.firstname" class="form-control" required/>
+					<p class="alert alert-danger" ng-show="testForm.firstname.$error.required && testForm.firstname.$dirty" class="alert alert-warning">
+					Required</p>
+				</div>
+
+				<div class="form-group">
+	   				<label for="surname">Surname</label>
+					<input name="surname" type="text" ng-model="formData.surname" class="form-control" required/>
+					<p class="alert alert-danger" ng-show="testForm.surname.$error.required && testForm.surname.$dirty" class="alert alert-warning">
+					Required</p>
+				</div>
+
+				<div class="form-group">
+	   				<label for="dob">Date of birth</label>
+					<input name="dob" type="date" ng-model="formData.dob" max="{{ maxDate | date:'yyyy-MM-dd' }}" class="form-control" required/>
+					<p class="alert alert-danger" ng-show="testForm.dob.$error.required && testForm.dob.$dirty" class="alert alert-warning">
+					Required</p>
+					<p class="alert alert-danger" ng-show="testForm.dob.$error.max && testForm.dob.$dirty" class="alert alert-warning">
+					Must be older than 18 years of age</p>
+				</div>
+
+				<div class="form-group">
+	   				<label for="password">Password</label>
+					<input name="password" type="password" ng-model="formData.password" class="form-control" ng-pattern="regex.alphanumeric" required/>
+					<p class="alert alert-danger" ng-show="testForm.password.$error.required && testForm.password.$dirty" class="alert alert-warning">
+					Required</p>
+					<p class="alert alert-danger" ng-show="testForm.password.$error.pattern && testForm.password.$dirty" class="alert alert-warning">
+					Password must contain at least one character and one number</p>
+				</div>
+
+				<div class="form-group">
+	   				<label for="address">Address</label>
+					<input name="address" type="text" ng-model="formData.address" class="form-control"/>
+				</div>
+				
+				<div class="form-group">
+	   				<label for="postcode">Postcode</label>
+					<input name="postcode" type="text" ng-model="formData.postcode" ng-pattern="regex.postcode" ng-minlength="6" class="form-control"/>
+					<p class="alert alert-danger" ng-show="testForm.postcode.$error.minlength && testForm.postcode.$dirty" class="alert alert-warning">Must be more than 6 characters</p>
+					<p class="alert alert-danger" ng-show="testForm.postcode.$error.pattern && testForm.postcode.$dirty" class="alert alert-warning">Must be in format xxx xx</p>
+				</div>
+
+				<div class="form-group">
+	   				<label for="city">City</label>
+					<input name="city" type="text" ng-model="formData.city" ng-minlength="2" class="form-control"/>
+					<p class="alert alert-danger" ng-show="testForm.city.$error.minlength && testForm.city.$dirty" class="alert alert-warning">Must be at least 2 characters</p>
+				</div>
+
+				<div>
+					<label>Favorite color</label>
+				</div>	
+
+				<div class="form-group">
+	   				<label class="radio-inline">
+						<input name="color" type="radio" ng-model="formData.color" value="red" /> red
+					</label>
+					<label class="radio-inline">
+						<input name="color" type="radio" ng-model="formData.color" value="white" /> white
+					</label>
+					<label class="radio-inline">
+						<input name="color" type="radio" ng-model="formData.color" value="blue" /> blue
+					</label>
+					<label class="radio-inline">
+						<input name="color" type="radio" ng-model="formData.color" value="green" /> green
+					</label>
+					<label class="radio-inline">
+						<input name="color" type="radio" ng-model="formData.color" value="yellow" /> yellow
+					</label>
+				</div>
+				
+				<div class="form-group">
+	   				<label for="car">Favorite car</label> <br/>
+					<select name="car" ng-model="formData.car" ng-options="car for car in carMakes"></select>
+				</div>
+				
+				<input type="submit" class="btn btn-default" ng-disabled="testForm.$dirty && testForm.$invalid"/>
+			</form>
+			<h2> Result </h2>
+			Firstname: {{result.firstname}}<br/>
+			Surname: {{result.surname}}<br/>
+			Dob: {{result.dob | date:'yyyy-MM-dd'}}<br/>
+			Password: {{result.password}}<br/>
+			Address: {{result.address}}<br/>
+			Postcode: {{result.postcode}}<br/>
+			City: {{result.city}}<br/>
+			Favorite color: {{result.color}}<br/>
+			Favorite car: {{result.car}}<br/>
+		</div>
+	</body>
+</html>

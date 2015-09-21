@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      Search: <input ng-model="query" class="form-control">
+
+    </div>
+    <div class="col-md-10">
+      <!--Body content-->
+
+      
+        <div ng-repeat="phone in phones | filter:{ surname: query } | orderBy:'surname'">
+          <a href="#/phones/{{ phone.id }}" class="thumb"><img ng-src="https://pbs.twimg.com/profile_images/344513261568157486/627deec235f9365458c8542f88b6e03b_reasonably_small.jpeg"></a>
+          <a href="#/phones/{{ phone.id}}">{{ phone.number }}, {{ phone.firstname }}, {{ phone.surname }}</a>
+        </div>
+      
+
+    </div>
+  </div>
+</div>

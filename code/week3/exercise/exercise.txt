@@ -1,0 +1,29 @@
+Can you change the todo app so it saves and retrieves the data from a server.
+
+Server:
+	http://api.beta2.se/yourName-list
+
+	Alternatively:
+	Run the server locally 
+	
+	To install:
+	git clone https://github.com/tablackmore/memoryDataService.git
+	cd memoryDataService
+	npm install
+	node index.js
+
+	http://localhost:14782/yourName-list
+
+	Which ever you use the api is:
+
+	get /yourName-list  <-- returns an array of list objects. One object per item
+
+	get /yourName-list/1 <-- returns object with id 1 from list
+	put /yourName-list/1 data --> updates the object with id 1 to be the data you sent or creates the object
+	del /yourName-list/1 deletes the object with id 1 from list
+	post /yourName-list data --> creates the object in the list and returns its id.
+
+	The data is stored purely in memory on the server i.e. if you restart the service it will reset all your data.
+
+
+1) Rewrite the code in todo.js so the list items are those that exist on the server. Make sure you can create items, read items and delete items.

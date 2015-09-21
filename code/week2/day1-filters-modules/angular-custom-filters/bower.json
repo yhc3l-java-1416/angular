@@ -1,0 +1,29 @@
+{
+  "name": "angular-custom-filters",
+  "version": "0.0.1",
+  "homepage": "https://github.com/tablackmore/angular-custom-filters",
+  "authors": [
+    "Tom Blackmore <tablackmore@gmail.com>"
+  ],
+  "description": "A set of custom filters for angularjs",
+  "main": "src/angular-custom-filters.js",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "examples"
+  ],
+  "dependencies": {
+    "angularjs": "~1.2.21"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.21"
+  }
+}

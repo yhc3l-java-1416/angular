@@ -1,0 +1,7 @@
+1) Create an image carousel directive. (Until Monday)
+
+2) Find and consume (Today)
+	a date picker directive.
+	a map of stockholm.
+
+3) I totally understand. Filters, Directives, Modules, Controllers, Factory/Services, Views/Partials, ngRoute, jasmine testing, bower, yeoman. (Until Monday)

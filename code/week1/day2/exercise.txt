@@ -1,0 +1,16 @@
+Create a form with validation
+
+You have been given the following brief:
+Firstname: required, 
+Surname: required, 
+Date of birth: required and must be a valid date, user must be over 18. 
+Password, required must be more than 6 characters and contain both numbers and characters (hint look at ng-pattern).
+Adress,
+Postcode: must be a valid Svensk postnummer
+City: Must be longer than 1 character.
+Favorite color: Choose from 5 colors, as a radio button.
+Favorite car: Choose from a list of cars, the list of cars available to choose from should be specified in the controller as this will eventually be collected from a database.
+
+Validate the form and provide the user with relevant feedback if they do anything wrong.
+
+Only if the form is valid allow the form to be submitted. Submitting the form should display the information the user submitted under the form.

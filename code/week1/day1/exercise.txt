@@ -1,0 +1,18 @@
+Create a simple todo list app.
+
+1) Create an html view containing: 
+	an empty html list (The todo list), 
+	an html input text box that you will use to add new data to your list,
+	an html button also used to add data to your list.
+
+2) Create a javascript file containing an angular module called todo and a controller called TodoCtrl.
+
+3) In the controller define an array called list fill it with some dummy text data. Ensure that this array is attached or defined to the $scope.
+
+4) Create a function called addItem again attached to the scope. This function should take a list item and push it into the list.
+
+5) Wire up your html view so that it uses your module and controller. (ng-app, ng-controller)
+
+6) Get your html list to display the entire contents of the list in your controller. (ng-repeat)
+
+7) Allow your list to be added to by wiring up the text box and the button to the addItem function in your controller. (ng-model, ng-click).

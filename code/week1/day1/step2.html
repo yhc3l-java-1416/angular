@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Step 2</title>
+		<script src="../../lib/angular1.4.x/angular.min.js"></script>
+		<script>
+			var app = angular.module('myApp', []);
+			app.controller('GreeterCtrl', function($scope){
+				$scope.currentGreeting = 'hello';
+				$scope.changeGreeting = function(newGreeting){
+					$scope.currentGreeting = newGreeting;
+				};
+			});
+		</script>
+	</head>
+	<body ng-controller="GreeterCtrl">
+		Change greeting: <input type="text" ng-model="greeting"/>
+		<button ng-click="changeGreeting(greeting)">Change</button>
+		<h2>{{currentGreeting}}</h2>
+		<p>
+			There are {{ currentGreeting.length }} characters in greeting.
+		</p>
+	</body>
+</html>

@@ -1,0 +1,19 @@
+Crazy Exercises
+
+1) Use an ng-switch to achieve the following.
+
+Add an input element to your page. 
+When you type Fred in the input display Hi Fred.
+When you type Åsa in the input display Hej Åsa.
+When you type John in the input display Howdy John.
+
+2) Use as ng-class directive.
+
+Create a div and an input element.
+The contents of the div should be the value of the input element.
+
+In your controller create a function called isGreen. The function should return true if the text in the input element is 'green'.
+
+Add a style tag and css class called green that sets backgound-color: green.
+
+Use ng-class, your green css class and your isGreen function togethor so that the backgound of the div is green only if the user types the word green in the input box. 

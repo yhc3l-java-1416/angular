@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="directiveExampleApp">
+	<head>
+		<meta charset="utf-8"/>
+		<title>directives example</title>
+		<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
+		<script src="../bower_components/jquery/dist/jquery.js"></script>
+		<script src="../bower_components/angularjs/angular.js"></script>
+		<script src="./js/app.js"></script>
+		<script src="../src/angular-my-custom-directives.js"></script>
+	</head>
+	<body ng-controller="MainCtrl">
+		<div class="container">
+			<my-page-heading>
+				<h2>Hello</h2>
+			</my-page-heading>
+			<h1> {{ 1 + 1 }} </h1>
+			<input ng-model="searchText" my-select-all-on-focus/>
+			<div ng-repeat="aPerson in people | filter:{firstname:searchText}">
+				<my-person person="aPerson"></my-person>
+			</div>
+			<my-social-buttons></my-social-buttons>
+		</div>
+	</body>
+</html>
