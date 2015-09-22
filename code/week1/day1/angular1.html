@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title>Angular</title>
+	<script src="../../lib/angular1.4.x/angular.min.js"></script>
+</head>
+<body ng-init="names=['Dave', 'Tom', 'Lotta']">
+	<h1>Tom's angular demo</h1>
+	<input type="text" ng-model="searchText"/>
+	<p>
+		Tom is looking for {{ searchText | uppercase}}.
+	</p>
+	<ul>	
+		<li ng-repeat="namn in names | filter:searchText">{{ $index }} {{ namn }}</li>
+	</ul>
+</body>
+</html>
