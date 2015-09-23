@@ -21,14 +21,22 @@
 		<div class="container">
 			<h1>Form demo</h1>
 			<form name="testForm" ng-submit="sendForm()">
-				<input name="firstName" type="text" ng-model="formData.text" class="form-control" ng-minlength="4"
-	       ng-maxlength="6" ng-pattern="alphanumeric" required/>
+				<input name="firstName" type="text" ng-model="formData.text" class="form-control" 
+					ng-minlength="4" 
+					ng-maxlength="6" 
+					ng-pattern="alphanumeric" 
+					required/>
 				<br/>
+				
 				<p class="alert alert-danger" ng-show="testForm.firstName.$error.required && testForm.firstName.$dirty" class="alert alert-warning">
 				Required</p>
+				
 				<p class="alert alert-danger" ng-show="testForm.firstName.$error.minlength && testForm.firstName.$dirty" class="alert alert-warning">Too short</p>
+
 				<p class="alert alert-danger" ng-show="testForm.firstName.$error.maxlength && testForm.firstName.$dirty" class="alert alert-warning">Too long</p>
+
 				<p class="alert alert-danger" ng-show="testForm.firstName.$error.pattern && testForm.firstName.$dirty" class="alert alert-warning">Must contain at least one number and one character.</p>
+				
 				<input type="submit" class="btn btn-default" ng-disabled="testForm.$dirty && testForm.$invalid"/>
 			</form>
 			<h2>{{ formData.text }} </h2>

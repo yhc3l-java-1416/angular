@@ -14,6 +14,9 @@ The contents of the div should be the value of the input element.
 
 In your controller create a function called isGreen. The function should return true if the text in the input element is 'green'.
 
-Add a style tag and css class called green that sets backgound-color: green.
+Add a style tag and css class called green that sets background-color: green.
 
-Use ng-class, your green css class and your isGreen function togethor so that the backgound of the div is green only if the user types the word green in the input box. 
+Use ng-class, your green css class and your isGreen function together so that the background of the div is green only if the user types the word green in the input box.
+
+
+

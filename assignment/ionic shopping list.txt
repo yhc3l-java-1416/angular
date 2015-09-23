@@ -1,0 +1,17 @@
+Ionic Shopping List
+
+You are to build a simple native shopping list app for both iOS and android with the angular and cordova framework called ionic.
+
+http://ionicframework.com/
+https://cordova.apache.org/
+
+Design spec.
+
+When you open your app you should see the items that you need to buy and add item button.
+
+For each item in the list you should be able to:
+	a) see the information about the item, either directly or in a sub page, 
+	b) be able to check it (to say you have bought it).
+	c) be able to delete it (you no longer want to buy it).
+
+When you click on the add item button the user should be presented with a form with name, stockist and quantity.
