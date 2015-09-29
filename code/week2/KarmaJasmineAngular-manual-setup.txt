@@ -2,6 +2,8 @@
 
 mkdir myModule
 
+cd myModule
+
 # initialise it as an npm module so we can keep track of node developer tools
 
 npm init
