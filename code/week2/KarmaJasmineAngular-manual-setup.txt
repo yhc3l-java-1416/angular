@@ -26,7 +26,11 @@ npm install karma karma-jasmine karma-chrome-launcher --save-dev
 
 # create a src directory and a tests directory write your source code and your jasmine tests.
 
-# to run the tests 
+# configure karma by adding all the dependencies
+
+karma init
+
+# to run the tests
 
 karma start
 
