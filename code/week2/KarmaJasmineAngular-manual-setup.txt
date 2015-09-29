@@ -1,0 +1,30 @@
+#make a directory for you module
+
+mkdir myModule
+
+# initialise it as an npm module so we can keep track of node developer tools
+
+npm init
+
+# initialise it as a client bower module
+
+bower init
+
+# install angular as a dependency
+
+bower install angular --save
+
+# install angular-mocks as a developer dependency
+
+bower install angular-mocks --save-dev
+
+# install the node modules needed to test an angular app: karma, karma-jasmine, karma-chrome-launcher as developer dependencies
+
+npm install karma karma-jasmine karma-chrome-launcher --save-dev
+
+# create a src directory and a tests directory write your source code and your jasmine tests.
+
+# to run the tests 
+
+karma start
+

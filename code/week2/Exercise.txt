@@ -1,0 +1,19 @@
+1) Create angular filters:
+
+title case: 
+
+	This filter should capitalise the first character in every word. It should also capitalise words seperated by a - . All other characters should be lowercase. 
+
+	tOm bLacKMore = Tom Blackmore 
+
+	john-christian johnsson = John-Christian Johnsson
+
+
+unique :
+
+	This filter returns a string arrary removing duplicates.
+
+
+2) Seperate the filters into there own module that lives in a seperate directory. Add jasmine unit tests to test the functions work as you want.
+
+See KarmaJasmineAngular-manual-setup.js for getting started.
