@@ -4,11 +4,23 @@ angular.module('myComponentsDemo', [
 	'myComponents'
 ]).config(function ($routeProvider) {
 	$routeProvider
-		.when('/', {
+		.when('/a', {
 			templateUrl: 'views/menu.html',
-			controller: 'MenuCtrl',
+			controller: 'MenuCtrl'
+		})
+		.when('/directives/select-all-on-focus', {
+			templateUrl: 'views/directives/select-all-on-focus.html',
+			controller: 'SelectAllOnFocusCtrl'
+		})
+		.when('/directives/social-buttons', {
+			templateUrl: 'views/directives/social-buttons.html',
+			controller: 'SocialButtonsCtrl'
+		})
+		.when('/directives/user', {
+			templateUrl: 'views/directives/user.html',
+			controller: 'UserCtrl'
 		})
 		.otherwise({
-			redirectTo: '/'
+			redirectTo: '/directives/user'
 		});
 });
