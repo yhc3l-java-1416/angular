@@ -6,14 +6,11 @@ angular.module('myComponents')
 			scope: {
 				user: '='
 			},
-			template: '<div>' +
-				'<h2>User: {{user.name}} </h2>' +
-				'<p ng-click="warn()">Welcome back {{user.nickname}} </p>' +
-				'</div>',
-			controller: function ($scope) {
+			templateUrl: 'src/directives/user.html',
+			controller: ['$scope', function ($scope) {
 				$scope.warn = function () {
 					alert('Watch out' + $scope.user.nickname);
 				};
-			}
+			}]
 		};
 	});

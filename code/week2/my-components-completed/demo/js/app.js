@@ -4,7 +4,7 @@ angular.module('myComponentsDemo', [
 	'myComponents'
 ]).config(function ($routeProvider) {
 	$routeProvider
-		.when('/a', {
+		.when('/', {
 			templateUrl: 'views/menu.html',
 			controller: 'MenuCtrl'
 		})
@@ -21,6 +21,6 @@ angular.module('myComponentsDemo', [
 			controller: 'UserCtrl'
 		})
 		.otherwise({
-			redirectTo: '/directives/user'
+			redirectTo: '/'
 		});
 });
